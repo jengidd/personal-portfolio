@@ -44,10 +44,25 @@ body {
     justify-content: space-evenly;
 }
 
+#contact {
+    display: flex;
+    justify-content: center;
+    margin: 6rem;
+}
+
 figcaption {
     text-align: center;
 }
 
 h1 {
     color: #fff;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;height: 60px;
+    background-color: #003C50;
+    color: #fff;
+    height: 6rem;
 }
