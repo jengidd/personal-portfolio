@@ -8,6 +8,12 @@ body {
 
 }
 
+@media (hover: hover) {
+    body {
+        color: navy;
+    }
+}
+
 #navbar {
     display: flex;
     justify-content: flex-end;
