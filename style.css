@@ -8,9 +8,9 @@ body {
 
 }
 
-@media (hover: hover) {
+@media print {
     body {
-        color: navy;
+        font-size: 12pt;
     }
 }
 
