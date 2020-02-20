@@ -48,7 +48,6 @@ body {
 #projects {
     padding-top: 5rem;
     padding-bottom: 5rem;
-
 }
 
 #project-list {
@@ -78,6 +77,10 @@ body {
 
 figcaption {
     text-align: center;
+    background-color: #003C50;
+    color: #fff;
+    max-width: 200px;
+    position: relative;
 }
 
 h1 {
