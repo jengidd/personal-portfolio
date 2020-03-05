@@ -1,0 +1,39 @@
+:root {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Oxanium';
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+.container {
+    display: flex;
+}
+
+nav {
+    border: solid 2px white;
+    padding-right: 1rem;
+    color: white;
+}
+
+a > img {
+    height: 18rem;
+    margin: 4px;
+}
+
+button {
+    font-size: 1rem;
+    background-color: goldenrod;
+    padding: 10px;
+    font-family: 'Oxanium';
+}
