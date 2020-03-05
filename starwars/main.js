@@ -8,23 +8,24 @@ const femaleButton = document.querySelector('#femaleButton')
 const otherButton = document.querySelector('#otherButton')
 
 const otherCharacters = people.filter(person => {
-    if (person.gender === "hermaphrodite" || 
+    if (
+        person.gender === "hermaphrodite" || 
         person.gender === "n/a" || 
         person.gender === "none"
-        ) {
+    ) {
         return person
     }
 })
 
-maleButton.addEventListener("click", (event) => {
-    populateDOM(people.filter(person => person.gender === "male"))
+maleButton.addEventListener('click', event => {
+    populateDOM(people.filter(person => person.gender === 'male'))
 })
 
-femaleButton.addEventListener("click", (event) => {
-    populateDOM(people.filter(person => person.gender === "female"))
+femaleButton.addEventListener('click', event => {
+    populateDOM(people.filter(person => person.gender === 'female'))
 })
 
-otherButton.addEventListener("click", (event) => {
+otherButton.addEventListener('click', event => {
     populateDOM(otherCharacters)
 })
 
@@ -39,14 +40,16 @@ function getCharNumber(url) {
     return url.slice(start, end)
 }
 
-function populateDOM(maleCharacters) {
-    maleCharacters.forEach(person => {
+//getCharNumber("https://swapi.co/api/people/1/")
+
+function populateDOM(characters) {
+    characters.forEach(person => {
         // need to extract the number from the person.url property
     let charNum = getCharNumber(person.url)
-    let anchorWrap = document.createElement("a")
-    anchorWrap.href = "#"
+    let anchorWrap = document.createElement('a')
+    anchorWrap.href = '#'
 
-    let imageItem = document.createElement("img")
+    let imageItem = document.createElement('img')
     imageItem.src = `https://starwars-visualguide.com/assets/img/characters/${charNum}.jpg`
 
     imageItem.addEventListener('error', (event) => {
@@ -57,10 +60,10 @@ function populateDOM(maleCharacters) {
     })
 
     // add some way to handle user clicks on the image
-    imageItem.addEventListener("click", () => {
-        console.log("It Worked")
+    imageItem.addEventListener('click', event => {
+        console.log(event)
     })
     anchorWrap.appendChild(imageItem)
-    greetingDiv.appendChild(imageItem)
+    greetingDiv.appendChild(anchorWrap)
 })
 }
