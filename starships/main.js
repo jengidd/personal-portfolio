@@ -1,4 +1,4 @@
-import { starships } from "..data/starships.js"
+import { starships } from "../data/starships.js"
 
 const nav = document.querySelector('.nav')
 
@@ -6,6 +6,7 @@ const navList = document.querySelector('.navList')
 
 function populateNav(starships) {
     starships.forEach(starship => {
+
         let anchorWrap = document.createElement('a')
         anchorWrap.href = '#'
         anchorWrap.addEventListener('click', event => {
