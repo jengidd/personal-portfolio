@@ -8,6 +8,12 @@ body {
     font-family: 'Oxanium';
 }
 
+header, footer {
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+}
+
 a {
     text-decoration: none;
 }
@@ -36,4 +42,8 @@ button {
     background-color: goldenrod;
     padding: 10px;
     font-family: 'Oxanium';
+}
+
+.modal {
+
 }
