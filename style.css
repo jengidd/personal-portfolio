@@ -4,8 +4,9 @@
     scroll-behavior: smooth;
 }
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Fjalla One', sans-serif;
     font-size: 1rem;
+    color: peachpuff;
 }
 
 @media print {
@@ -32,7 +33,7 @@ body {
     display: block;
     padding: 2rem;
     text-decoration: none;
-    color: antiquewhite;
+    color: peachpuff;
 }
 
 #welcome-section {
@@ -58,13 +59,17 @@ body {
 }
 
 #contact {
+    height: 40vh;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-color: peachpuff;
+}
+
+#contact-links {
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
-    text-align: center;
-    height: 40vh;
-    padding: 0 2rem;
-    background-color: peachpuff;
+    margin-top: 5rem;
+    font-size: 2rem;
 }
 
 #contact a {
@@ -74,13 +79,12 @@ body {
     color: #003C50;
 }
 
-
 figcaption {
     text-align: center;
-    background-color: #003C50;
-    color: #fff;
+    color: #003C50;
     max-width: 200px;
     position: relative;
+    font-size: 2rem;
 }
 
 h1 {
@@ -89,6 +93,14 @@ h1 {
 }
 
 h2 {
+    color: #003C50;
+    font-size: 3rem;
+    text-align: center;
+    text-decoration: underline;
+}
+
+h3 {
+    color: #fff;
     font-size: 2rem;
     text-align: center;
 }
