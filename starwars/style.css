@@ -33,6 +33,7 @@ a > img {
 button {
     font-size: 1rem;
     background-color: goldenrod;
+    border-color: goldenrod;
     padding: 10px;
     margin: 2px;
     font-family: "Oxanium"
