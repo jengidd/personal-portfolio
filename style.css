@@ -77,7 +77,6 @@ h3 {
 }
 
 #contact {
-    height: 30vh;
     padding-top: 5rem;
     padding-bottom: 5rem;
     background-color: peachpuff;
@@ -89,6 +88,7 @@ h3 {
     margin-top: 5rem;
     margin-left: 20rem;
     margin-right: 20rem;
+    margin-bottom: 5rem;
     font-size: 2rem;
 }
 
