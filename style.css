@@ -9,6 +9,24 @@ body {
     color: peachpuff;
 }
 
+h1 {
+    color: #fff;
+    font-size: 4rem;
+}
+
+h2 {
+    color: #003C50;
+    font-size: 3rem;
+    text-align: center;
+    text-decoration: underline;
+}
+
+h3 {
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+}
+
 @media print {
     body {
         font-size: 12pt;
@@ -79,35 +97,27 @@ body {
     color: #003C50;
 }
 
-figcaption {
+.project-tile {
+    text-align: center;
+  }
+
+figure > img {
+    max-height: 300px;
+    max-width: 300px;
+  }
+
+  figcaption {
     text-align: center;
     color: #003C50;
-    max-width: 200px;
+    max-width: 300px;
     position: relative;
     font-size: 2rem;
-}
-
-h1 {
-    color: #fff;
-    font-size: 4rem;
-}
-
-h2 {
-    color: #003C50;
-    font-size: 3rem;
-    text-align: center;
-    text-decoration: underline;
-}
-
-h3 {
-    color: #fff;
-    font-size: 2rem;
-    text-align: center;
 }
 
 a {
     text-decoration: none;
 }
+
 a:hover {
     background-color: peachpuff;
     color: #003C50;
