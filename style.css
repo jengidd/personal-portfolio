@@ -77,7 +77,7 @@ h3 {
 }
 
 #contact {
-    height: 40vh;
+    height: 30vh;
     padding-top: 5rem;
     padding-bottom: 5rem;
     background-color: peachpuff;
@@ -85,8 +85,10 @@ h3 {
 
 #contact-links {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     margin-top: 5rem;
+    margin-left: 20rem;
+    margin-right: 20rem;
     font-size: 2rem;
 }
 
@@ -106,7 +108,7 @@ figure > img {
     max-width: 300px;
   }
 
-  figcaption {
+figcaption {
     text-align: center;
     color: #003C50;
     max-width: 300px;
