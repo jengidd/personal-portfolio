@@ -68,7 +68,7 @@ footer {
     position: absolute;
     top: 50%;
     left: 50%;
-    height: 2px;
+    height: 1px;
     background: linear-gradient(-45deg, #5f91ff, rgba(0, 0, 255,0));
     filter: drop-shadow(0 0 6px #699bff);
     animation: tail 3000ms ease-in-out infinite, shooting 3000ms ease-in-out infinite;
@@ -81,14 +81,11 @@ footer {
     right: 0;
     height: 2px;
     background: linear-gradient(-45deg, rgba(0, 0, 255, 0), #5191ff, rgba(0, 0, 255, 0;));
-    border-radius: 100%;
+    border-radius: 100;
     transform: translateX(50%) rotateZ(45deg);
     animation: shining 3000ms ease-in-out infinite;
 }
 
-.star::after {
-    transform: translateX (50%) rotateZ(-45deg);
-}
 /* Animations */
 @keyframes tail {
     0% {
@@ -120,6 +117,6 @@ footer {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(320px);
+        transform: translateX(400px);
     }
 }
