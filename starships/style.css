@@ -89,8 +89,6 @@ footer {
     height: 2px;
     background: linear-gradient(-45deg, rgba(0, 0, 255, 0), #5191ff, rgba(0, 0, 255, 0));
     border-radius: 100;
-    transform: translateX(50%) rotateZ(45deg);
-    animation: shining 3000ms ease-in-out infinite;
 }
 
 .star:nth-child(1) {
