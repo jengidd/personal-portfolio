@@ -104,14 +104,14 @@ h3 {
   }
 
 figure > img {
-    max-height: 300px;
-    max-width: 300px;
+    max-height: 200px;
+    max-width: 200px;
   }
 
 figcaption {
     text-align: center;
     color: #003C50;
-    max-width: 300px;
+    max-width: 200px;
     position: relative;
     font-size: 2rem;
 }
