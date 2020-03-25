@@ -118,11 +118,11 @@ figcaption {
 
 a {
     text-decoration: none;
+    transition: transform .2s;
 }
 
 a:hover {
-    background-color: peachpuff;
-    color: #003C50;
+    transform: scale(1.25);
 }
 
 footer {
