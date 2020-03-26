@@ -59,12 +59,12 @@ footer {
     max-width: 100px;
   }
 
-  .sky-background {
+.sky-background {
     width: 75%;
-    height: 50px;
-    transform: rotateZ(45deg); 
+    height: 50px; 
     clip-path: circle(50% at 50% 50%);
     border-radius: 50%;
+    transform: rotateZ(45deg);
   }
 
 .star {
