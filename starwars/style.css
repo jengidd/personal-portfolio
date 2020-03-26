@@ -27,8 +27,9 @@ header {
   }
 
 a > img {
-    height: 18rem;
-    margin: 4px;
+    height: 15rem;
+    margin: 10px;
+    border-radius: 20px;
 }
 
 .selectCharacter {

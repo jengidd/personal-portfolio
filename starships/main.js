@@ -1,4 +1,4 @@
-import { starships } from "../data/starships.js"
+import { starships } from '../data/starships.js'
 import { getLastNumber, removeChildren } from '../scripts/utils.js'
 
 const nav = document.querySelector('.nav')

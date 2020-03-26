@@ -56,6 +56,7 @@ function populateDOM(characters) {
     imageItem.addEventListener('click', event => {
         console.log(event)
     })
+    
     anchorWrap.appendChild(imageItem)
     gallery.appendChild(anchorWrap)
 })
