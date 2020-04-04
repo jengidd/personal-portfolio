@@ -1,12 +1,11 @@
 function getPokeData(url) {
     let pokemonGrid = document.querySelector('.pokemonGrid')
     fetch(url).then(function (response) {
-        let pokeData = response.json().then(function (data) {
+        letresponse.json().then(function (data) {
             console.log(data)
-            pokemonGrid.textContent = data.name
-        })
-        
-    })
+            //pokemonGrid.textContent = data.name
+          })
+      })
 }
 
 getPokeData('https://pokeapi.co/api/v2/pokemon/1/')

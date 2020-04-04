@@ -1,4 +1,29 @@
+body {
+    color: #003C50;
+    font-family: 'DM Serif Display', serif;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.headerImage {
+    max-height: 200px;
+    max-width: 200px;
+}
+
 .senators {
     display: flex;
     flex-wrap: wrap;
+}
+
+img {
+    border-radius: 20px;
+}
+
+figcaption {
+    display: flex;
+    justify-content: center;
 }
