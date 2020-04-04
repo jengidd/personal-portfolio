@@ -1,16 +1,12 @@
 :root {
     box-sizing: border-box;
-    font-family: "Oxanium"
+    font-family: "Oxanium";
 }
 
 body {
-    background-color: #000;
+    background-color: black;
     color: #fff;
-}
-
-body, html {
-    height: 100vh;
-    margin: 0;
+    margin-top: 20px;
 }
 
 header {
@@ -19,8 +15,8 @@ header {
     font-size: 1rem;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 50px;
 }
+
 .headerImage {
     max-height: 100px;
     max-width: 100px;
@@ -30,11 +26,13 @@ a > img {
     height: 15rem;
     margin: 10px;
     border-radius: 20px;
+    align-items: center;
 }
 
 .selectCharacter {
     display: flex;
     justify-content: center;
+    margin-top: 20px;
 }
 
 button {
@@ -61,17 +59,15 @@ footer {
   }
 
 .sky-background {
-    width: 75%;
-    height: 50px; 
-    clip-path: circle(50% at 50% 50%);
-    border-radius: 50%;
-    transform: rotateZ(45deg);
+    display: flex;
+    width: 1000px;
+    height: 150px;
+    background: black;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
   }
 
 .star {
     position: absolute;
-    top: 50%;
-    left: 50%;
     height: 1px;
     background: linear-gradient(-45deg, #5f91ff, rgba(0, 0, 255,0));
     filter: drop-shadow(0 0 6px #699bff);
@@ -81,7 +77,7 @@ footer {
 .star::before, .star::after {
     position: absolute;
     content: '';
-    top: calc(50% - 1px);
+    top: calc(25% - 1px);
     right: 0;
     height: 2px;
     background: linear-gradient(-45deg, rgba(0, 0, 255, 0), #5191ff, rgba(0, 0, 255, 0));
@@ -89,50 +85,50 @@ footer {
 }
 
 .star:nth-child(1) {
-    top: calc(50% - 200px);
-    left: calc (50% - 300px);
+    top: calc(25% - 90px);
+    left: calc (25% - 250px);
     animation-delay: 650ms;
 }
 
 .star:nth-child(2) {
-    top: calc(50% - 100px);
-    left: calc (50% - -200px);
+    top: calc(25% - 30px);
+    left: calc (25% - -300px);
     animation-delay: 3025ms;
 }
 
 .star:nth-child(3) {
-    top: calc(50% - -90px);
-    left: calc (50% - 180px);
+    top: calc(25% - 20px);
+    left: calc (25% - 180px);
     animation-delay: 4000ms;
 }
 
 .star:nth-child(4) {
-    top: calc(50% - -50px);
-    left: calc (50% - 10px);
-    animation-delay: 1250ms;
+    top: calc(25% - -50px);
+    left: calc (25% - 10px);
+    animation-delay: 2000ms;
 }
 
 .star:nth-child(5) {
-    top: calc(50% - -125px);
-    left: calc (50% - 200px);
+    top: calc(25% - 0px);
+    left: calc (25% - 250px);
     animation-delay: 650ms;
 }
 
 .star:nth-child(6) {
-    top: calc(50% - 200px);
-    left: calc (50% - -200px);
-    animation-delay: 3025ms;
+    top: calc(25% - 25px);
+    left: calc (25% - -200px);
+    animation-delay: 2025ms;
 }
 
 .star:nth-child(7) {
-    top: calc(50% - 75px);
-    left: calc (50% - 50px);
+    top: calc(25% - 75px);
+    left: calc (25% - 50px);
     animation-delay: 4000ms;
 }
 
 .star:nth-child(8) {
-    top: calc(50% - 50px);
-    left: calc (50% - 175px);
+    top: calc(25% - 50px);
+    left: calc (25% - 175px);
     animation-delay: 1250ms;
 }
 
@@ -167,6 +163,6 @@ footer {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(400px);
+        transform: translateX(800px);
     }
 }
