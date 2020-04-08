@@ -72,5 +72,5 @@ card.addEventListener('click', function() {
     <div class="card__face card__face--front">front</div>
     <div class="card__face card__face--back">back</div>
   </div>
-  </div>
+  </div> */
 }
