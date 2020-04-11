@@ -27,3 +27,18 @@ figcaption {
     display: flex;
     justify-content: center;
 }
+
+.selectParty {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    font-size: 1rem;
+    background-color: #003C50;
+    border-color: #003C50;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    font-family: "Oxanium"
+}

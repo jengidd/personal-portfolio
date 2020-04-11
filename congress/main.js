@@ -37,6 +37,8 @@ const filterSenators = (prop, value) => {
 }
 
 const republicans = filterSenators('party', 'R')
+const democrats = filterSenators('party', 'D')
+const independents = filterSenators('party', 'ID')
 
 const mostSeniority = getSimplifiedSenators(republicans).reduce(
     (acc, senator) => {
@@ -46,4 +48,18 @@ const mostSeniority = getSimplifiedSenators(republicans).reduce(
 
 console.log(mostSeniority)
 
-populateSenatorDiv(getSimplifiedSenators(republicans))
+const democratButton = document.querySelector('#democratButton')
+const republicanButton = document.querySelector('#republicanButton')
+const independentButton = document.querySelector('#independentButton')
+
+democratButton.addEventListener('click', event => {
+    populateSenatorDiv(getSimplifiedSenators(democrats))
+})
+
+republicanButton.addEventListener('click', event => {
+    populateSenatorDiv(getSimplifiedSenators(republicans))
+})
+
+independentButton.addEventListener('click', event => {
+    populateSenatorDiv(getSimplifiedSenators(independents))
+})
