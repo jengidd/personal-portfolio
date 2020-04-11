@@ -35,10 +35,11 @@ figcaption {
 
 button {
     font-size: 1rem;
-    background-color: #003C50;
-    border-color: #003C50;
+    background-color: maroon;
+    border-color: maroon;
     color: white;
     padding: 10px;
+    border-radius: 5px;
     margin: 5px;
     font-family: "Oxanium"
 }
