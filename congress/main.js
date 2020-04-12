@@ -1,4 +1,5 @@
 import { senators } from '../data/senators.js'
+import { removeChildren } from '../scripts/utils.js'
 
 const senatorDiv = document.querySelector('.senators')
 
@@ -7,7 +8,7 @@ function  getSimplifiedSenators(senatorArray) {
     let middleName = senator.middle_name ? ` ${senator.middle_name} ` : ` `
     return {
         id: senator.id,
-        name: `${senator.first_name}${middleName}${senator.last_name}`,
+        name: `${senator.first_name}${middleName}${senator.last_name}, ${senator.state}`,
         imgURL: `https://www.govtrack.us/static/legislator-photos/${senator.govtrack_id}-200px.jpeg`,
         seniority: parseInt(senator.seniority, 10)
     }
