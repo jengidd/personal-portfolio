@@ -111,7 +111,7 @@ function addPokemon() {
     },
     {
       ability: {
-        name: 'Ranci Stench'
+        name: 'Rancid Stench'
       }
     }
   ])
