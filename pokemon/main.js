@@ -11,6 +11,7 @@ async function getAPIData(url) {
 }
 
 //note line
+function loadPage() {
 getAPIData('https://pokeapi.co/api/v2/pokemon/?&limit=25').then((data) => {
   for (const pokemon of data.results) {
     getAPIData(pokemon.url).then((pokeData) => {
@@ -18,8 +19,19 @@ getAPIData('https://pokeapi.co/api/v2/pokemon/?&limit=25').then((data) => {
     })
   }
 })
+}
 
 let pokemonGrid = document.querySelector('.pokemonGrid')
+let startButton = document.querySelector('#startButton')
+let newButton = document.querySelector('#newButton')
+
+startButton.addEventListener('click', () => {
+  loadPage()
+})
+
+newButton.addEventListener('click', () => {
+  addPokemon()
+})
 
 function populatePokeCard(singlePokemon) {
   let pokeScene = document.createElement('div')
@@ -41,11 +53,24 @@ function populatePokeCard(singlePokemon) {
 function populateCardFront(pokemon) {
   let cardFront = document.createElement('div')
   cardFront.className = 'card__face card__face--front'
-  cardFront.textContent = pokemon.name
   let frontImage = document.createElement('img')
-  frontImage.src = `../images/${pokemon.id}.png`
+  frontImage.src = `../images/${getImageFileName(pokemon)}.png`
+
+  let frontLabel = document.createElement ('p')
+  frontLabel.textContent = `${pokemon.name.charAt(0).toUpperCase()}${pokemon.name.slice(1)}`
   cardFront.appendChild(frontImage)
+  cardFront.appendChild(frontLabel)
   return cardFront
+}
+
+function getImageFileName(pokemon) {
+  if (pokemon.id < 10) {
+    return `00${pokemon.id}`
+  } else if (pokemon.id > 9 && pokemon.id < 100) {
+    return `0${pokemon.id}`
+  } else if (pokemon.id > 809) {
+    return `pokemon-icon`
+  }
 }
 
 function populateCardBack(pokemon) {
@@ -60,4 +85,35 @@ function populateCardBack(pokemon) {
   cardBack.appendChild(abilityList)
   return cardBack
 }
-    
+
+class Pokemon {
+  constructor(height, weight, name, abilities) {
+    this.height = height;
+    this.weight = weight;
+    this.name = name;
+    this.abilities = abilities;
+    this.id = 900
+  }
+}
+
+function addPokemon() {
+  let Thoremon = new Pokemon(190, 290, 'thoremon',
+  [
+    {
+      ability: {
+        name: 'Thunder Belly'
+      }
+    },
+    {
+      ability: {
+        name: 'Beard Power'
+      }
+    },
+    {
+      ability: {
+        name: 'Ranci Stench'
+      }
+    }
+  ])
+  populatePokeCard(Thoremon)
+}
