@@ -47,8 +47,6 @@ const mostSeniority = getSimplifiedSenators(republicans).reduce(
     }
 )
 
-console.log(mostSeniority)
-
 const democratButton = document.querySelector('#democratButton')
 const republicanButton = document.querySelector('#republicanButton')
 const independentButton = document.querySelector('#independentButton')
