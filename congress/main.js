@@ -2,6 +2,21 @@ import { senators } from '../data/senators.js'
 import { removeChildren } from '../scripts/utils.js'
 
 const senatorDiv = document.querySelector('.senators')
+const democratButton = document.querySelector('#democratButton')
+const republicanButton = document.querySelector('#republicanButton')
+const independentButton = document.querySelector('#independentButton')
+
+democratButton.addEventListener('click', event => {
+    populateSenatorDiv(getSimplifiedSenators(democrats))
+})
+
+republicanButton.addEventListener('click', event => {
+    populateSenatorDiv(getSimplifiedSenators(republicans))
+})
+
+independentButton.addEventListener('click', event => {
+    populateSenatorDiv(getSimplifiedSenators(independents))
+})
 
 function  getSimplifiedSenators(senatorArray) {
     return senatorArray.map(senator => {
@@ -46,19 +61,3 @@ const mostSeniority = getSimplifiedSenators(republicans).reduce(
         return acc.seniority > senator.seniority ? acc : senator
     }
 )
-
-const democratButton = document.querySelector('#democratButton')
-const republicanButton = document.querySelector('#republicanButton')
-const independentButton = document.querySelector('#independentButton')
-
-democratButton.addEventListener('click', event => {
-    populateSenatorDiv(getSimplifiedSenators(democrats))
-})
-
-republicanButton.addEventListener('click', event => {
-    populateSenatorDiv(getSimplifiedSenators(republicans))
-})
-
-independentButton.addEventListener('click', event => {
-    populateSenatorDiv(getSimplifiedSenators(independents))
-})
