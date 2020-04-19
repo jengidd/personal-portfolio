@@ -76,12 +76,15 @@ function getImageFileName(pokemon) {
 function populateCardBack(pokemon) {
   let cardBack = document.createElement('div')
   cardBack.className = 'card__face card__face--back'
+  let abilityBack = document.createElement ('p')
+  abilityBack.textContent = 'Abilities'
   let abilityList = document.createElement('ul')
   pokemon.abilities.forEach(ability => {
     let abilityName = document.createElement('li')
     abilityName.textContent = ability.ability.name
     abilityList.appendChild(abilityName)
   })
+  cardBack.appendChild(abilityBack)
   cardBack.appendChild(abilityList)
   return cardBack
 }
@@ -97,23 +100,23 @@ class Pokemon {
 }
 
 function addPokemon() {
-  let Thoremon = new Pokemon(190, 290, 'thoremon',
+  let wolverine = new Pokemon(190, 290, 'wolverine',
   [
     {
       ability: {
-        name: 'Thunder Belly'
+        name: 'Include'
       }
     },
     {
       ability: {
-        name: 'Beard Power'
+        name: 'Engage'
       }
     },
     {
       ability: {
-        name: 'Rancid Stench'
+        name: 'Achieve'
       }
     }
   ])
-  populatePokeCard(Thoremon)
+  populatePokeCard(wolverine)
 }
