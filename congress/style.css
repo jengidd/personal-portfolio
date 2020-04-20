@@ -43,3 +43,42 @@ button {
     margin: 5px;
     font-family: "Oxanium"
 }
+
+.card {
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .card.is-flipped {
+    transform: rotateY(180deg);
+  }
+  
+  .card__face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    backface-visibility: hidden;
+  }
+  
+  .card__face--front {
+    background: #FF9A1C;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+  }
+  
+  .card__face--back {
+    background: blue;
+    transform: rotateY(180deg);
+    text-align: center;
+    border-radius: 10px;
+  }
