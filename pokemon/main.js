@@ -122,7 +122,7 @@ class Pokemon {
 }
 
 function addPokemon() {
-  let wolverine = new Pokemon(190, 290,
+  let wolverine = new Pokemon(19, 41,
   [
     {
       type: {
