@@ -76,31 +76,70 @@ function getImageFileName(pokemon) {
 function populateCardBack(pokemon) {
   let cardBack = document.createElement('div')
   cardBack.className = 'card__face card__face--back'
-  let abilityBack = document.createElement ('p')
-  abilityBack.textContent = 'Abilities'
+  
+  let heightBack = document.createElement ('h2')
+  heightBack.textContent = `Height: ${pokemon.height}`
+
+  let weightBack = document.createElement ('h2')
+  weightBack.textContent = `Weight: ${pokemon.weight}`
+  
+  let typesBack = document.createElement ('h2')
+  typesBack.textContent = 'Type:'
+  let typesList = document.createElement('ul')
+  pokemon.types.forEach(type => {
+    let typeName = document.createElement('li')
+    typeName.textContent = type.type.name
+    typesList.appendChild(typeName)
+  })
+  
+  let abilityBack = document.createElement ('h2')
+  abilityBack.textContent = 'Abilities:'
   let abilityList = document.createElement('ul')
   pokemon.abilities.forEach(ability => {
     let abilityName = document.createElement('li')
     abilityName.textContent = ability.ability.name
     abilityList.appendChild(abilityName)
   })
+
+  cardBack.appendChild(heightBack)
+  cardBack.appendChild(weightBack)
+  cardBack.appendChild(typesBack)
+  cardBack.appendChild(typesList)
   cardBack.appendChild(abilityBack)
   cardBack.appendChild(abilityList)
   return cardBack
 }
 
 class Pokemon {
-  constructor(height, weight, name, abilities) {
+  constructor(height, weight, types, name, abilities) {
     this.height = height;
     this.weight = weight;
+    this.types = types;
     this.name = name;
     this.abilities = abilities;
-    this.id = 900
+    this.id = 1000
   }
 }
 
 function addPokemon() {
-  let wolverine = new Pokemon(190, 290, 'wolverine',
+  let wolverine = new Pokemon(190, 290,
+  [
+    {
+      type: {
+        name: 'Awesome'
+      }
+    },
+    {
+      type: {
+        name: 'Learner'
+      }
+    },
+    {
+      type: {
+        name: 'Superior in UT Valley'
+      }
+    }
+  ], 'wolverine',
   [
     {
       ability: {
