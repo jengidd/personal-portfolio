@@ -44,7 +44,15 @@ button {
     font-family: "Oxanium"
 }
 
-.card {
+.scene {
+    width: 200px;
+    height: 260px;
+    margin: 10px;
+    perspective: 600px;
+    border-radius: 10px;
+  }
+  
+  .card {
     width: 100%;
     height: 100%;
     transition: transform 1s;
@@ -68,17 +76,24 @@ button {
   }
   
   .card__face--front {
-    background: #FF9A1C;
+    background: radial-gradient(gold, #FF9A1C);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     border-radius: 10px;
+    border-style: solid;
+    border-color: gold;
+    border-width: 5px;
   }
   
   .card__face--back {
-    background: blue;
+    background: radial-gradient(#4DB5D9 , #003C50);
     transform: rotateY(180deg);
     text-align: center;
     border-radius: 10px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #4DB5D9;
+    border-width: 5px;
   }
