@@ -31,7 +31,12 @@ startButton.addEventListener('click', () => {
 })
 
 newButton.addEventListener('click', () => {
-  addPokemon()
+  let newCardCoords = addPokemon()
+  window.scrollTo({
+    top: newCardCoords.top,
+    left: newCardCoords.left,
+    behavior: 'smooth'
+  })
 })
 
 function populatePokeCard(singlePokemon) {
@@ -49,6 +54,7 @@ function populatePokeCard(singlePokemon) {
   pokeCard.appendChild(pokeBack)
   pokeScene.appendChild(pokeCard)
   pokemonGrid.appendChild(pokeScene)
+  return pokeScene.getBoundingClientRect()
 }
 
 function populateCardFront(pokemon) {
@@ -158,5 +164,5 @@ function addPokemon() {
       }
     }
   ])
-  populatePokeCard(wolverine)
+  return populatePokeCard(wolverine)
 }
