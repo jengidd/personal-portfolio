@@ -1,6 +1,4 @@
-import { films } from '../data/films.js'
 import { people } from '../data/people.js'
-import { starships } from '../data/starships.js'
 import { getLastNumber, removeChildren } from '../scripts/utils.js'
 
 const gallery = document.querySelector('.gallery')
