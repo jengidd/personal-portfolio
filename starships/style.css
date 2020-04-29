@@ -71,112 +71,77 @@ footer {
     color: goldenrod;
     height: 6rem;
 }
-
-.sky-background {
-    display: flex;
-    width: 1000px;
-    height: 150px;
-    background: black;
-    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  
+@keyframes move-background {
+    from {
+          -webkit-transform: translate3d(0px, 0px, 0px);
+      }
+      to { 
+          -webkit-transform: translate3d(1000px, 0px, 0px);
+      }
   }
-
-.star {
-    position: absolute;
-    height: 1px;
-    background: linear-gradient(-45deg, #5f91ff, rgba(0, 0, 255,0));
-    filter: drop-shadow(0 0 6px #699bff);
-    animation: tail 3000ms ease-in-out infinite, shooting 3000ms ease-in-out infinite;
-}
-
-.star::before, .star::after {
-    position: absolute;
-    content: '';
-    top: calc(25% - 1px);
-    right: 0;
-    height: 2px;
-    background: linear-gradient(-45deg, rgba(0, 0, 255, 0), #5191ff, rgba(0, 0, 255, 0));
-    border-radius: 100;
-}
-
-.star:nth-child(1) {
-    top: calc(25% - 90px);
-    left: calc (25% - 250px);
-    animation-delay: 650ms;
-}
-
-.star:nth-child(2) {
-    top: calc(25% - 30px);
-    left: calc (25% - -300px);
-    animation-delay: 3025ms;
-}
-
-.star:nth-child(3) {
-    top: calc(25% - 20px);
-    left: calc (25% - 180px);
-    animation-delay: 4000ms;
-}
-
-.star:nth-child(4) {
-    top: calc(25% - -50px);
-    left: calc (25% - 10px);
-    animation-delay: 2000ms;
-}
-
-.star:nth-child(5) {
-    top: calc(25% - 0px);
-    left: calc (25% - 250px);
-    animation-delay: 650ms;
-}
-
-.star:nth-child(6) {
-    top: calc(25% - 25px);
-    left: calc (25% - -200px);
-    animation-delay: 2025ms;
-}
-
-.star:nth-child(7) {
-    top: calc(25% - 75px);
-    left: calc (25% - 50px);
-    animation-delay: 4000ms;
-}
-
-.star:nth-child(8) {
-    top: calc(25% - 50px);
-    left: calc (25% - 175px);
-    animation-delay: 1250ms;
-}
-
-/* Animations */
-@keyframes tail {
-    0% {
-        width: 0;
-    }
-    30% {
-        width: 100px;
-    }
-    100% {
-        width: 0;
-    }
-}
-
-@keyframes shining {
-    0% {
-        width: 0;
-    }
-    50% {
-        width: 30px;
-    }
-    100% {
-        width: 30px;
-    }
-
-}
-
-@keyframes shooting {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(400px);
-    }
-}
+  @-webkit-keyframes move-background {
+    from {
+          -webkit-transform: translate3d(0px, 0px, 0px);
+      }
+      to { 
+          -webkit-transform: translate3d(1000px, 0px, 0px);
+      }
+  }
+  
+  @-moz-keyframes move-background {    
+      from {
+          -webkit-transform: translate3d(0px, 0px, 0px);
+      }
+      to { 
+          -webkit-transform: translate3d(1000px, 0px, 0px);
+      }
+  }
+  
+      @-webkit-keyframes move-background {
+      from {
+          -webkit-transform: translate3d(0px, 0px, 0px);
+      }
+      to { 
+          -webkit-transform: translate3d(1000px, 0px, 0px);
+      }
+  }
+  
+  .background-container{
+      position: fixed;
+      top: 0;
+      left:0;
+      bottom: 0;
+      right: 0;
+  }
+  
+  .stars {
+   background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+   position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: block;
+        z-index: 0;
+  }
+  
+  .twinkling{
+      width:10000px;
+      height: 100%;
+      background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png") repeat;
+      background-size: 1000px 1000px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 2;
+      
+      -moz-animation:move-background 70s linear infinite;
+    -ms-animation:move-background 70s linear infinite;
+    -o-animation:move-background 70s linear infinite;
+    -webkit-animation:move-background 70s linear infinite;
+    animation:move-background 70s linear infinite;
+      
+  }
+  
