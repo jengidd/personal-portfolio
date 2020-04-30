@@ -170,4 +170,3 @@ function addPokemon() {
 
 /* } else if (pokemon.id > 99 && pokemon.id < 964) {
   return `${pokemon.id}` */
-  
