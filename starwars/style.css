@@ -15,6 +15,7 @@ header {
     font-size: 1rem;
     flex-direction: column;
     align-items: center;
+    position: relative;
 }
 
 .headerImage {
@@ -27,6 +28,7 @@ a > img {
     margin: 10px;
     border-radius: 20px;
     align-items: center;
+    position: relative;
 }
 
 .selectCharacter {
@@ -42,7 +44,8 @@ button {
     border-color: goldenrod;
     padding: 10px;
     margin: 5px;
-    font-family: "Oxanium"
+    font-family: "Oxanium";
+    position: relative;
 }
 
 footer {
@@ -52,6 +55,7 @@ footer {
     align-items: center;
     color: goldenrod;
     height: 6rem;
+    position: relative;
 }
 
 .headerImage {
@@ -63,7 +67,6 @@ footer {
     display: flex;
     width: 1000px;
     height: 150px;
-    background: black;
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
   }
 
@@ -167,3 +170,76 @@ footer {
         transform: translateX(800px);
     }
 }
+
+@keyframes move-background {
+    from {
+          -webkit-transform: translate3d(0px, 0px, 0px);
+      }
+      to { 
+          -webkit-transform: translate3d(1000px, 0px, 0px);
+      }
+  }
+  @-webkit-keyframes move-background {
+    from {
+          -webkit-transform: translate3d(0px, 0px, 0px);
+      }
+      to { 
+          -webkit-transform: translate3d(1000px, 0px, 0px);
+      }
+  }
+  
+  @-moz-keyframes move-background {    
+      from {
+          -webkit-transform: translate3d(0px, 0px, 0px);
+      }
+      to { 
+          -webkit-transform: translate3d(1000px, 0px, 0px);
+      }
+  }
+  
+      @-webkit-keyframes move-background {
+      from {
+          -webkit-transform: translate3d(0px, 0px, 0px);
+      }
+      to { 
+          -webkit-transform: translate3d(1000px, 0px, 0px);
+      }
+  }
+  
+  .background-container{
+      position: fixed;
+      top: 0;
+      left:0;
+      bottom: 0;
+      right: 0;
+  }
+  
+  .stars {
+   background: url("../images/stars.png") repeat;
+   position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: block;
+        z-index: 0;
+  }
+  
+  .twinkling{
+      width:10000px;
+      height: 100%;
+      background: transparent url("../images/twinkling.png") repeat;
+      background-size: 1000px 1000px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 2;
+      
+      -moz-animation:move-background 30s linear infinite;
+    -ms-animation:move-background 30s linear infinite;
+    -o-animation:move-background 30s linear infinite;
+    -webkit-animation:move-background 30s linear infinite;
+    animation:move-background 30s linear infinite;
+      
+  }
