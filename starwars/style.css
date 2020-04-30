@@ -31,6 +31,12 @@ a > img {
     position: relative;
 }
 
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .selectCharacter {
     display: flex;
     justify-content: center;
