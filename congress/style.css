@@ -43,3 +43,10 @@ button {
     margin: 5px;
     font-family: "Oxanium"
 }
+
+footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 0.75rem;
+  }
