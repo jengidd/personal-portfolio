@@ -71,6 +71,7 @@ footer {
     align-items: center;
     color: goldenrod;
     height: 6rem;
+    position: relative;
 }
   
 @keyframes move-background {
